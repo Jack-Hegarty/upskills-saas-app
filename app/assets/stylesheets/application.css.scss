@@ -21,17 +21,38 @@
  
  h1, h2, h3 {
      font-family: 'Open-Sans', sans-serif;
-     font-weight: 800;
-     color:#fff;
- }
-
-
-body, .navbar{
- background: #517fa4; /* fallback for old browsers */
- background: -webkit-linear-gradient(to left, #517fa4 , #243949); /* Chrome 10-25, Safari 5.1-6 */
- background: linear-gradient(to left, #517fa4 , #243949); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.navbar a{
- color: #fff !important;
+
+.home-callout, .navbar{
+  background: #cb2d3e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #cb2d3e , #ef473a); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #cb2d3e , #ef473a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navbar{
+ border: none;
+}
+
+.navbar-default .navbar-brand{
+ color: #fff;
+ font-weight: 800;
+}
+
+.navbar-default .navbar-brand:hover,.navbar-default .navbar-nav li a:hover {
+ color: rgb(255, 166, 53);
+
+}
+
+.navbar-default .navbar-nav li a{
+ color:#fff;
+}
+
+
+
+.home-callout{
+ margin-top: -20px;
+ padding-top: 50px;
+ padding-bottom: 100px;
+ color: #fff;
 }
