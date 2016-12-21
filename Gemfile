@@ -27,7 +27,7 @@ gem 'jbuilder', '2.5.0'
 #\Use Tiwtter Bootstrap Lib for Front-End UI and Layout
 gem 'bootstrap-sass', '3.3.7' 
 
-
+gem 'font-awesome-sass', '~> 4.7.0'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
