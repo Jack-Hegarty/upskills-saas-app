@@ -19,13 +19,17 @@
             <span class="icon-bar"></span>
           </button>
           
-          <a href="/" class="navbar-brand"><i class="fa  fa-code"></i>JACK HEGARTY</a>
+          <%= link_to "/", class: "navbar-brand" do %>
+           <i class="fa  fa-code"></i>JACK HEGARTY
+          <% end %>
+          
         </div>
         
         <div class="collapse navbar-collapse" id="main-nav-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/">HOME</a></li>
-            <li><a href="/about">ABOUT</a></li>
+            <li><%= link_to "HOME", '/' %></li>
+            <li><%= link_to 'ABOUT', 'about' %></li>
+            
           </ul>
         </div><!-- / .navbar-collaspe -->
         
@@ -34,7 +38,5 @@
     
       <%= yield %>
 
-    
-    
   </body>
 </html>
