@@ -57,6 +57,19 @@ p{
  }
 }
 
+/* Toggle Nav */
+
+.navbar-default .navbar-toggle {
+    border-color: #fff;
+    background-color: #fff;
+}
+
+
+.navbar-default .navbar-toggle:hover {
+    opacity: .75;
+}
+
+
 
 /* HERO */
 .home-callout{
