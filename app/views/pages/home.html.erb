@@ -2,3 +2,24 @@
     <h1>Find Your Perfect Home.</h1>
     <h3>Connecting high-quality Home Buyers to high-quality Real Estate Agents.</h3>
 </div>
+
+<div class="container home-membership-sign-up">
+    <div class="row text-center">
+        <div class="col-md-6">
+            <div class="well">
+                <h2>Basic Membership</h2>
+                <h4>A free membership for basic access to the community.</h4>
+                <br/>
+                <%= link_to "Basic - Sign Up",  new_user_registration_path, class: "btn btn-lg btn-block btn-primary" %>
+            </div>
+        </div>
+        <div class="col-md-6">    
+            <div class="well">
+                <h2>Pro Membership</h2>
+                <h4>$5 / month for exclusive access and contact information.</h4>
+                <br/>
+                <%= link_to "Pro - Sign Up",  new_user_registration_path, class: "btn btn-lg btn-block btn-success" %>
+            </div>
+        </div>
+    </div>
+</div>
