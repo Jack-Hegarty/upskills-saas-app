@@ -3,3 +3,8 @@ Mebmberships
 * User should see link for Pro Plan on Homepage
 * Basic link should point at the standard Sign Up Form
 * Pro Plan should poin to Custom Sign-Up with CC information
+
+
+ActiveRecords
+Paramaters
+Subsititouns
