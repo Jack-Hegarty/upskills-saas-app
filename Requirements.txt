@@ -8,3 +8,23 @@ Mebmberships
 ActiveRecords
 Paramaters
 Subsititouns
+
+
+* Stripe Integration
+    - Modify DB table to store 'Customer Token'
+    - Use Javascript to prevent pro-form from submitting
+        - Then Javascript shoul send CC info to Stripe
+        - Stripe will return a Card Token
+    - Javascript sends form fields, hidden fields, and card tokesns to rails application
+    - Rails app will validate form fields
+    - Rails to send User info & card token to Stripe
+    - Stripe will create subscription & return Customer Token
+    - Save all user information in rails applcation 
+    
+
+
+
+
+    
+    
+    
