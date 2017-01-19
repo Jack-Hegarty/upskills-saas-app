@@ -1,46 +1,28 @@
-/* global $ , Stripe*/    
-
-// Doc Ready Fucntion
-    // Set STRIPE Public Key
-    // When users clicks form submit btn
-        // Prevent default behavior
-        
-        //Collect the CC fields
-        // Send CC info to STRIPE
-        // Stripe will return card token
-        // inject that token into form
-    // Submit Form to rails app
-
-
+/* global $, Stripe */
+//Document ready.
 $(document).on('turbolinks:load', function(){
-    var theForm = $('#pro-form');
-    var submitBtn = $('#form-submit-btn');
-
-    Stripe.setPublishableKey( $('meta[name="stripe-key"]').attr('content') );
-    
-    
-    // When the submit button is clicked.... 
-    submitBtn.click(function(event){
-        
-       // Prevent Form Submission    
-       event.preventDefault();
-       
-       // Assign Form Values to Variables
-       var ccNum = $('#card_number').val();
-       var cvcNum =  $('#card_code').val();
-       var exMo =  $('#card_month').val();
-       var exYr =  $('#card_year').val();
-            
-        
-    });
-    
-    // Send to Stripe
+  var theForm = $('#pro_form');
+  var submitBtn = $('#form-submit-btn');
+  //Set Stripe public key.
+  Stripe.setPublishableKey( $('meta[name="stripe-key"]').attr('content') );
+  //When user clicks form submit btn,
+  submitBtn.click(function(event){
+    //prevent default submission behavior.
+    event.preventDefault();
+    //Collect the credit card fields.
+    var ccNum = $('#card_number').val(),
+        cvcNum = $('#card_code').val(),
+        expMonth = $('#card_month').val(),
+        expYear = $('#card_year').val();
+    //Send the card info to Stripe.
     Stripe.createToken({
-        number: ccNum,
-        cvc: cvcNum,
-        exp_month: exMo,
-        exp_year: exYr
-    }, stripeResponseHandler){
-
-    });
+      number: ccNum,
+      cvc: cvcNum,
+      exp_month: expMonth,
+      exp_year: expYear
+    }, stripeResponseHandler);
+  });
+  //Stripe will return a card token.
+  //Inject card token as hidden field into form.
+  //Submit form to our Rails app.
 });
